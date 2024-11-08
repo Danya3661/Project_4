@@ -1,0 +1,132 @@
+.news {
+	background-color: $bg_color;
+	background-image: url(../imgs/history/v.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	position: relative;
+}
+.section__decor_w3 {
+	position: absolute;
+	top: -7rem;
+	left: 10rem;
+	display: block;
+	object-fit: contain;
+	width: 14.6rem;
+	height: 14.6rem;
+}
+.news__in {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #dcca8733;
+	box-shadow: 22px 30px 95px 1px #000000b2;
+	background-color: #0c0c0c;
+	padding: 6.4rem 3rem;
+
+	@include bp($point_2, min) {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		left: 50%;
+		top: 135%;
+	}
+}
+.news_block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	@include bp($point_2, min) {
+		width: 79.6rem;
+		row-gap: 6.4rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+		row-gap: 3.2rem;
+	}
+}
+.news__main_info {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.news__subtitle {
+	margin-bottom: 0.8rem;
+}
+.news__info_decor {
+	display: block;
+	object-fit: contain;
+	width: 5rem;
+	height: 4rem;
+	margin-bottom: 0.8rem;
+}
+.news__title {
+	margin-bottom: 2.4rem;
+	@include bp($point_3) {
+		font-size: 3.2rem;
+		line-height: 5.2rem;
+		text-align: center;
+	}
+}
+.news__descr {
+	font-family: $font_1;
+	font-size: 1.6rem;
+	line-height: 2.8rem;
+	letter-spacing: 0.04em;
+	text-align: center;
+	color: $color_white;
+}
+.news__form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	@include bp($point_2, min) {
+		justify-content: space-between;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 2rem;
+	}
+}
+.news__input {
+	height: 6rem;
+	padding-left: 2rem;
+	border: 1px solid #f5efdb;
+	background-color: transparent;
+	line-height: 6rem;
+	font-family: $font_1;
+	font-size: 1.6rem;
+	line-height: 2.8rem;
+	letter-spacing: 0.04em;
+	color: $color_white;
+
+	@include bp($point_2, min) {
+		width: 63.4rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+	}
+}
+.news__input::placeholder {
+	font-family: $font_2;
+	font-size: 1.6rem;
+	font-weight: 600;
+	line-height: 2.8rem;
+	letter-spacing: 0.04em;
+	color: $text_color;
+}
+.news__form_btn {
+	@extend%btn_size_3;
+	@extend%btn_color;
+	@extend%btn_font;
+	@extend%btn_hover;
+}

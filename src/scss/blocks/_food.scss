@@ -1,0 +1,127 @@
+.food {
+	background-image: url(../imgs/history/history_bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: relative;
+}
+.section__decor_w6 {
+	position: absolute;
+	left: 15rem;
+	display: block;
+	object-fit: contain;
+	width: 14.6rem;
+	height: 14.6rem;
+
+	@include bp($point_2, min) {
+		top: 0;
+	}
+
+	@include bp($point_3) {
+		top: -7rem;
+	}
+}
+.food__in {
+	display: flex;
+
+	@include bp($point_2, min) {
+		align-items: flex-end;
+		justify-content: center;
+		column-gap: 14rem;
+	}
+
+	@include bp($point_3) {
+		align-items: center;
+		flex-direction: column;
+		row-gap: 3rem;
+	}
+}
+.food__coll {
+	&.food__collfood__coll--one {
+		@include bp($point_2, min) {
+			width: 52.2rem;
+		}
+
+		@include bp($point_3) {
+			width: 100%;
+		}
+	}
+	&.food__collfood__coll--two {
+		display: flex;
+		flex-direction: column;
+
+		@include bp($point_2, min) {
+			width: 63.4rem;
+		}
+
+		@include bp($point_3) {
+			width: 100%;
+		}
+	}
+}
+.food__img_w1 {
+	display: block;
+	object-fit: contain;
+
+	@include bp($point_2, min) {
+		width: 52.2rem;
+		height: 70.2rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.food__img_w2 {
+	display: block;
+	object-fit: contain;
+
+	@include bp($point_2, min) {
+		width: 63.4rem;
+		height: 38.4rem;
+		margin-bottom: 4rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+		height: 100%;
+		margin-bottom: 2rem;
+	}
+}
+.food__img {
+	@extend %contain_image;
+}
+.food__subtitle {
+	margin-bottom: 0.8rem;
+}
+.food__info_decor {
+	display: block;
+	object-fit: contain;
+	width: 5rem;
+	height: 4rem;
+	margin-bottom: 0.8rem;
+}
+.food__title {
+	margin-bottom: 3.2rem;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+	&:hover {
+		text-decoration: underline;
+	}
+	@include bp($point_3) {
+		font-size: 3.2rem;
+		line-height: 5.2rem;
+	}
+}
+.food__descr {
+	margin-bottom: 3.2rem;
+}
+.food__btn {
+	@extend%btn_size_2;
+	@extend%btn_color;
+	@extend%btn_font;
+	@extend%btn_hover;
+}

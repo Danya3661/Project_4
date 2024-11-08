@@ -1,0 +1,150 @@
+.blog {
+	background-color: $bg_color;
+	position: relative;
+	background-image: url(../imgs/history/v.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.blog__decor_w {
+	position: absolute;
+	bottom: 10rem;
+	right: 10rem;
+	display: block;
+	object-fit: contain;
+	width: 14.6rem;
+	height: 14.6rem;
+
+	@include bp($point_3) {
+		display: none;
+	}
+}
+.blog__in {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	@include bp($point_2, min) {
+		row-gap: 6.4rem;
+	}
+
+	@include bp($point_3) {
+		row-gap: 3.2rem;
+	}
+}
+.blog_info {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 0.8rem;
+}
+.blog__title {
+	@include bp($point_3) {
+		font-size: 3.2rem;
+		line-height: 5.2rem;
+	}
+}
+.blog__info_decor {
+	display: block;
+	object-fit: contain;
+	width: 5rem;
+	height: 4rem;
+}
+.blog_list {
+	width: 100%;
+	display: flex;
+
+	@include bp($point_2, min) {
+		flex-wrap: wrap;
+		column-gap: 3.2rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 2rem;
+	}
+}
+.blog__item {
+	display: flex;
+	flex-direction: column;
+
+	@include bp($point_2, min) {
+		width: calc((100% - 6.4rem) / 3);
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+	}
+}
+.blog__img_w {
+	display: block;
+	object-fit: contain;
+	border: 1px solid #dcca8733;
+	margin-bottom: 2.4rem;
+
+	@include bp($point_2, min) {
+		width: 41.2rem;
+		height: 43rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+		height: 100%;
+	}
+}
+.blog__img {
+	@extend %contain_image;
+}
+.blog__sub_w {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 3.2rem;
+}
+.blog__sub {
+	font-family: $font_1;
+	font-size: 1.6rem;
+	line-height: 2.8rem;
+	letter-spacing: 0.04em;
+	color: #fafafa;
+}
+.blog__item_title {
+	font-family: $font_2;
+	font-size: 3.2rem;
+	line-height: 4rem;
+	letter-spacing: 0.04em;
+	color: $gold_color;
+	text-decoration: none;
+	margin-bottom: 3.2rem;
+	transition: all 0.5s ease-in-out;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.blog__item_descr {
+	margin-bottom: 3.2rem;
+}
+.blog__item_btn {
+	font-family: $font_2;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 2.8rem;
+	letter-spacing: 0.04em;
+	color: $gold_color;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.blog__btn {
+	@extend%btn_size_2;
+	@extend%btn_color;
+	@extend%btn_font;
+	@extend%btn_hover;
+}

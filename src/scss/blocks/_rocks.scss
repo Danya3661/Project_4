@@ -1,0 +1,118 @@
+.rocks {
+	background-image: url(../imgs/history/history_bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.rocks__in {
+	display: flex;
+	justify-content: space-between;
+
+	@include bp($point_2, min) {
+		justify-content: space-between;
+	}
+
+	@include bp($point_3) {
+		justify-content: center;
+	}
+}
+.rocks__coll {
+	&.rocks__coll.rocks__coll--one {
+		@include bp($point_2, min) {
+			width: 4.4rem;
+		}
+
+		@include bp($point_3) {
+			display: none;
+		}
+	}
+	&.rocks__coll.rocks__coll--two {
+		position: relative;
+
+		@include bp($point_2, min) {
+			width: 63.4rem;
+		}
+
+		@include bp($point_3) {
+			width: 100%;
+		}
+	}
+	&.rocks__coll.rocks__coll--three {
+		@include bp($point_2, min) {
+			width: 2rem;
+			display: flex;
+			align-items: flex-end;
+		}
+		@include bp($point_3) {
+			display: none;
+		}
+	}
+}
+.rocks__sub_w {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 4rem;
+	transform: rotate(-90deg);
+}
+.rocks__sub {
+	font-family: $font_1;
+	font-size: 1.8rem;
+	line-height: 3rem;
+	letter-spacing: 0.04em;
+	color: $color_white;
+}
+.rocks__img_w {
+	display: block;
+	object-fit: contain;
+	border: 1px solid #dcca87;
+
+	@include bp($point_2, min) {
+		width: 63.4rem;
+		height: 84rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+		height: 100%;
+	}
+}
+.rocks__img {
+	@extend %contain_image;
+}
+.rocks__title_w {
+	display: block;
+	object-fit: contain;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+
+	@include bp($point_2, min) {
+		width: 107rem;
+		height: 23.4rem;
+	}
+	
+	@include bp($point_3) {
+		width: 90%;
+		height: 100%;
+	}
+	
+}
+.rocks__title {
+	@extend %contain_image;
+}
+.rocks__date {
+	display: flex;
+	column-gap: 0.8rem;
+	transform: rotate(90deg);
+	span {
+		font-family: $font_2;
+		font-size: 1.6rem;
+		font-weight: 600;
+		line-height: 2.8rem;
+		letter-spacing: 0.04em;
+		color: $color_white;
+	}
+}

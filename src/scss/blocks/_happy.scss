@@ -1,0 +1,138 @@
+.happy {
+	background-color: $bg_color;
+	background-image: url(../imgs/happy/hbg.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+.section__decor_w5 {
+	position: absolute;
+	top: -5rem;
+	right: 20rem;
+	display: block;
+	object-fit: contain;
+	width: 14.6rem;
+	height: 14.6rem;
+}
+.happy__in {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	@include bp($point_2, min) {
+		row-gap: 6.4rem;
+	}
+
+	@include bp($point_3) {
+		row-gap: 3.2rem;
+	}
+}
+.happy__main_info {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 0.8rem;
+}
+.happy__info_decor {
+	display: block;
+	object-fit: contain;
+	width: 5rem;
+	height: 4rem;
+}
+.happy__title {
+	@include bp($point_3) {
+		font-size: 3.2rem;
+		line-height: 5.2rem;
+	}
+}
+.happy__list {
+	width: 100%;
+	display: flex;
+
+	@include bp($point_2, min) {
+		flex-wrap: wrap;
+		column-gap: 3.2rem;
+		row-gap: 6.4rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 2rem;
+	}
+}
+.happy__item {
+	display: flex;
+	align-items: center;
+
+	@include bp($point_2, min) {
+		width: calc((100% - 3.2rem) / 2);
+		justify-content: center;
+		column-gap: 3rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 2rem;
+		width: 100%;
+	}
+}
+.happy__img_w {
+	display: block;
+	object-fit: contain;
+	position: relative;
+
+	@include bp($point_2, min) {
+		width: 50rem;
+		height: 19rem;
+	}
+
+	@include bp($point_2) {
+		width: 100%;
+		height: 100%;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		background-image: url(../imgs/word/note.svg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		bottom: -2rem;
+		right: -1.6rem;
+		width: 4.6rem;
+		height: 4rem;
+		
+		@include bp($point_3) {
+		display: none;
+		}
+		
+	}
+}
+.happy__img {
+	@extend %contain_image;
+}
+.happy__item_descr {
+	margin-bottom: 1.6rem;
+}
+.happy__item_name {
+	font-family: $font_2;
+	font-size: 3.2rem;
+	line-height: 4rem;
+	letter-spacing: 0.04em;
+	color: $gold_color;
+	margin-bottom: 0.4rem;
+}
+.happy__item_subname {
+	font-family: $font_1;
+	font-size: 1.6rem;
+	line-height: 2.8rem;
+	letter-spacing: 0.04em;
+	color: #f5efdb;
+}

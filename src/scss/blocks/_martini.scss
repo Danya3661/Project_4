@@ -1,0 +1,52 @@
+.martini {
+	background-image: url(../imgs/martini/martini.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 90rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.martini__in {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.martini__info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	row-gap: 3.2rem;
+}
+.martini__title {
+	font-family: $font_2;
+	
+	font-weight: 600;
+	
+	letter-spacing: 0.03em;
+	color: $gold_color;
+	
+	@include bp($point_2, min) {
+		font-size: 12.8rem;
+		line-height: 16.6rem;
+	}
+	
+	@include bp($point_3) {
+		font-size: 6rem;
+		line-height: 8rem;
+	}
+	
+	
+}
+.martini__descr {
+	font-family: $font_2;
+	font-size: 3.2rem;
+	font-weight: 700;
+	line-height: 4rem;
+	letter-spacing: 0.04em;
+	color: $color_white;
+}

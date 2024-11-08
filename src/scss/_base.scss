@@ -1,0 +1,82 @@
+html {
+	@include bp($point_2, min) {
+		font-size: calc(100dvw / 1920 * 10);
+	}
+
+	@include bp($point_3) {
+		font-size: 10px;
+	}
+}
+
+html,
+body {
+	height: 100%;
+	font-family: $font_1;
+	font-weight: 400;
+	scroll-behavior: smooth;
+}
+body:has(.header_menu.active) {
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.section {
+	width: 100%;
+	padding: 12rem 0;
+}
+
+.container {
+	padding: 0 3rem;
+	width: 100%;
+	max-width: 169rem;
+
+	margin: 0 auto;
+	&.container.container--w_2 {
+		max-width: 136rem;
+	}
+
+	&.container.container--w_3 {
+		max-width: 158rem;
+	}
+	&.container.container--w_4 {
+		max-width: 128rem;
+	}
+	&.container.container--w_5 {
+		max-width: 100%;
+	}
+}
+.subtitle {
+	font-family: $font_2;
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 3rem;
+	color: $color_white;
+	letter-spacing: 0.04em;
+}
+.title {
+	font-family: $font_2;
+	font-size: 6.4rem;
+	font-weight: 600;
+	line-height: 8.4rem;
+	letter-spacing: 0.03em;
+	color: $gold_color;
+}
+.descr {
+	font-family: $font_1;
+	font-size: 1.6rem;
+	font-style: italic;
+	line-height: 2.8rem;
+	letter-spacing: 0.04em;
+	color: $text_color;
+}

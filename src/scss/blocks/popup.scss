@@ -1,0 +1,39 @@
+.popup {
+	position: fixed;
+	width: 100dvw;
+	height: 100dvh;
+	z-index: 988;
+	top: 0;
+	left: 0;
+	background-color: #0C0B08;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.9;
+}
+.popup.active {
+	display: flex;
+}
+.popup__in {
+	position: relative;
+	width: 100%;
+	max-width: 30rem;
+	padding: 3rem;
+	background-color: #fff;
+	box-shadow: 1.2rem 1.2rem 0.2rem 0.1rem gray;
+}
+.popup__close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-image: url(../imgs/popup/cross.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}

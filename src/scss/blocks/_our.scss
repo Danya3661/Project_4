@@ -1,0 +1,164 @@
+.our {
+	background-image: url(../imgs/history/history_bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.our__in {
+	display: flex;
+	align-items: center;
+
+	@include bp($point_2, min) {
+		justify-content: space-between;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 2rem;
+	}
+}
+.our__coll {
+	&.our__coll.our__coll--one {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		@include bp($point_2, min) {
+			width: 63.4rem;
+			row-gap: 6.4rem;
+		}
+
+		@include bp($point_3) {
+			width: 100%;
+			row-gap: 3.2rem;
+		}
+	}
+	&.our__coll.our__coll--two {
+		@include bp($point_2, min) {
+			width: 48.2rem;
+		}
+
+		@include bp($point_3) {
+			width: 100%;
+		}
+	}
+}
+.our__info {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.8rem;
+
+	@include bp($point_3) {
+		align-items: center;
+		text-align: center;
+	}
+}
+.our__title {
+	@include bp($point_3) {
+		font-size: 3.2rem;
+		line-height: 5.2rem;
+	}
+}
+.our__info_decor {
+	display: block;
+	object-fit: contain;
+	width: 5rem;
+	height: 4rem;
+}
+.our__list {
+	width: 100%;
+	display: flex;
+
+	@include bp($point_2, min) {
+		flex-wrap: wrap;
+		column-gap: 3.2rem;
+		row-gap: 6.4rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 2rem;
+	}
+}
+.our__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 3.2rem;
+
+	@include bp($point_2, min) {
+		width: calc((100% - 3.2rem) / 2);
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+	}
+}
+.our__item__img_W {
+	display: block;
+	object-fit: contain;
+
+	width: 8rem;
+	height: 8rem;
+}
+.our__item__img {
+	@extend %contain_image;
+}
+.our__item_info {
+	display: flex;
+	row-gap: 0.8rem;
+	flex-direction: column;
+}
+.our__item_title {
+	font-family: $font_2;
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 3rem;
+	letter-spacing: 0.04em;
+	color: $gold_color;
+}
+.g2_w {
+	display: block;
+	object-fit: contain;
+}
+.our__img_w {
+	display: block;
+	object-fit: contain;
+	position: relative;
+
+	@include bp($point_2, min) {
+		width: 100%;
+		height: 69rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+		height: 100%;
+	}
+
+	.g {
+		display: block;
+
+		object-fit: contain;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		opacity: 80%;
+
+		@include bp($point_2, min) {
+			width: 36rem;
+			height: 38rem;
+		}
+
+		@include bp($point_3) {
+			width: 26rem;
+			height: 26rem;
+		}
+	}
+}
+.our__img {
+	@extend %contain_image;
+}

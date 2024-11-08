@@ -1,0 +1,134 @@
+.photo {
+	background-image: url(../imgs/history/history_bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.photo__in {
+	display: flex;
+	align-items: center;
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 3rem;
+	}
+}
+.photo__coll {
+	&.photo__coll.photo__coll--one {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include bp($point_2, min) {
+			width: 40%;
+		}
+
+		@include bp($point_3) {
+			width: 100%;
+		}
+	}
+	&.photo__coll.photo__coll--two {
+		@include bp($point_2, min) {
+			width: 60%;
+		}
+		@include bp($point_3) {
+			width: 100%;
+		}
+	}
+}
+.photo__info {
+	display: flex;
+	flex-direction: column;
+
+	@include bp($point_2, min) {
+		width: 49rem;
+	}
+	@include bp($point_3) {
+		width: 100%;
+	}
+}
+.photo__subtitle {
+	margin-bottom: 0.8rem;
+}
+.photo__info_decor {
+	display: block;
+	object-fit: contain;
+	width: 5rem;
+	height: 4rem;
+	margin-bottom: 0.8rem;
+}
+.photo__title {
+	margin-bottom: 2.4rem;
+	@include bp($point_3) {
+		font-size: 3.2rem;
+		line-height: 5.2rem;
+		margin-bottom: 1rem;
+	}
+}
+.photo__descr {
+	margin-bottom: 2.4rem;
+}
+.photo__btn {
+	@extend%btn_size_2;
+	@extend%btn_color;
+	@extend%btn_font;
+	@extend%btn_hover;
+}
+.photo_slider {
+	width: 100%;
+}
+.photo_slider_w {
+	width: 100%;
+}
+.photo_slider__item {
+	width: 30rem;
+
+	&:hover {
+		.inst_w {
+			z-index: 5;
+		}
+	}
+}
+
+.slider__item_container {
+	width: 100%;
+	position: relative;
+}
+.slider__img_w {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: contain;
+}
+.slider__img {
+	@extend %contain_image;
+}
+.inst_w {
+	width: 100%;
+	height: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	object-fit: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	cursor: pointer;
+	background: linear-gradient(207.55deg, rgba(0, 0, 0, 0.75) 1.5%, rgba(0, 0, 0, 0.64) 98.62%);
+}
+.slider__icon {
+	display: block;
+	object-fit: contain;
+
+	@include bp($point_2, min) {
+		width: 4.4rem;
+		height: 4.4rem;
+	}
+
+	@include bp($point_3) {
+		width: 2.2rem;
+		height: 2.2rem;
+	}
+}

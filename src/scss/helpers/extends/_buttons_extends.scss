@@ -1,0 +1,50 @@
+@mixin st_btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+	white-space: nowrap;
+
+	cursor: pointer;
+	text-decoration: none;
+}
+
+%btn_size_1 {
+	@include st_btn;
+	width: 15.6rem;
+	height: 4.4rem;
+	padding: 0 3.2rem;
+}
+%btn_size_2 {
+	@include st_btn;
+	width: 14rem;
+	height: 4.4rem;
+	padding: 0 3.2rem;
+}
+%btn_size_3 {
+	@include st_btn;
+	width: 13.2rem;
+	height: 4.4rem;
+	padding: 0 3.2rem;
+}
+%btn_color {
+	background-color: $gold_color;
+	color: $text_color_2;
+}
+%btn_font {
+	font-family: $font_2;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 4.4rem;
+}
+%btn_hover {
+	transition: all 0.5s ease-in-out;
+	&:hover {
+		border-radius: 2rem;
+		transform: scale(1.1, 1.1);
+		background-color: $color_white;
+		color: $color_black;
+	}
+}
+

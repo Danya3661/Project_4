@@ -1,0 +1,112 @@
+.poison {
+	background-color: $bg_color;
+	background-image: url(../imgs/happy/hbg.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.poison__in {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	@include bp($point_2, min) {
+		row-gap: 6.4rem;
+	}
+
+	@include bp($point_3) {
+		row-gap: 3.2rem;
+	}
+}
+.poison__main_info {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 0.8rem;
+}
+.poison__title {
+	@include bp($point_3) {
+		font-size: 3.2rem;
+		line-height: 5.2rem;
+	}
+}
+.poison__info_decor {
+	display: block;
+	object-fit: contain;
+	width: 5rem;
+	height: 4rem;
+}
+.poison_list {
+	display: flex;
+
+	@include bp($point_2, min) {
+		flex-wrap: wrap;
+		column-gap: 3.2rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 3rem;
+	}
+}
+.poison__item {
+	position: relative;
+	cursor: pointer;
+	&:hover {
+		.poison__descr_w {
+			z-index: 2;
+		}
+	}
+
+	@include bp($point_2, min) {
+		width: calc((100% - 6.4rem) / 3);
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+	}
+}
+.poison__img_w {
+	display: block;
+	object-fit: contain;
+	border: 1px solid #dcca87;
+
+	@include bp($point_2, min) {
+		width: 41.2rem;
+		height: 60rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+		height: 100%;
+	}
+}
+.poison__img {
+	@extend %contain_image;
+}
+.poison__descr_w {
+	width: 41.2rem;
+	height: 60rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	object-fit: contain;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+}
+.poison__descr {
+	font-family: $font_2;
+	font-size: 4.4rem;
+	font-weight: 600;
+	line-height: 5.8rem;
+	letter-spacing: 0.04em;
+	text-align: center;
+	color: $color_white;
+}

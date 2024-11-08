@@ -1,0 +1,110 @@
+.book {
+	background-color: $bg_color;
+	background-image: url(../imgs/history/v.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+}
+.book__in {
+	width: 100%;
+}
+.section__decor_w {
+	position: absolute;
+	top: -5rem;
+	right: 18.8rem;
+	display: block;
+	object-fit: contain;
+	width: 14.6rem;
+	height: 14.6rem;
+}
+.section__decor {
+	@extend %contain_image;
+}
+.book_block {
+	width: 100%;
+	min-height: 46.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #0c0c0c;
+	border: 1px solid #dcca8733;
+	box-shadow: 22px 30px 95px 1px #000000b2;
+	padding: 0 3.2rem;
+
+	@include bp($point_2, min) {
+		row-gap: 6.4rem;
+	}
+
+	@include bp($point_3) {
+		row-gap: 3.2rem;
+	}
+}
+.book__row {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.book__info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 0.8rem;
+}
+.book__title {
+	@include bp($point_3) {
+		font-size: 3.2rem;
+		line-height: 5.2rem;
+	}
+}
+.book__form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	@include bp($point_2, min) {
+		flex-wrap: wrap;
+		column-gap: 3.2rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 2rem;
+		align-items: center;
+	}
+}
+.select {
+	height: 6rem;
+	padding-left: 1.6rem;
+	border: 1px solid #f5efdb;
+	background-color: transparent;
+	color: $text_color;
+	font-family: $font_1;
+	font-size: 1.6rem;
+	font-weight: 600;
+	line-height: 2.8rem;
+	letter-spacing: 0.04em;
+	cursor: pointer;
+
+	@include bp($point_2, min) {
+		width: calc((100% - 6.4rem) / 3);
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+	}
+}
+.book__btn {
+	@extend%btn_size_3;
+	@extend%btn_color;
+	@extend%btn_font;
+	@extend%btn_hover;
+
+	@include bp($point_2, min) {
+		margin-top: 6.4rem;
+	}
+}
